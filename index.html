@@ -7,39 +7,23 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  
     <h1>Update css variable with <span class="h1">JS</span> </h1>
     <div class="controls">
 <label for="spacing">Spacing</label>
 <input type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
 
 <label for="blur">Blur</label>
-<input type="range" name="blur" min="10" max="25" value="10" data-sizing="px">
+<input type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
 
 <label for="base">Base Color</label>
 <input type="color" name="base" value="#ffc600">
 <!-- image -->
 <img src="london1.jpg">
 
-    </div>
+    
+</div>
 </body>
-<script>
-  const inputs=document.querySelectorAll('.controls input');
-  console.log(inputs);
-  inputs.forEach(input=>input.addEventListener('change',handleUpdate));
-  
-  // inputs.forEach(input=>addEventListener('mousemove',handleUpdate));
-
-
-  function handleUpdate(){
-
-    console.log("from function",this.value);
-    console.log("dataset",this.dataset);
-    // //getting the suffix value
-    const suffix=this.dataset.sizing || '';
-    console.log('suffix',suffix);
-    // //update the variable
-    console.log("attribute",this.name);
-    document.documentElement.style.setProperty(`--${this.name}`, this.value+suffix);
- }
-  // inputs.forEach(input=>addEventListener('change',handleUpdate))
+<script type="text/javascript" src="javascript.js">
+    
 </script>
